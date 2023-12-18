@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import UserTable from './tables/UserTable';
 import AddUserForm from './forms/AddUserForm';
 import EditUserForm from './forms/EditUserForm';
@@ -15,8 +15,6 @@ const App = () => {
   const [users, setUsers] = useState(usersData);
   const [editing, setEditing] = useState(false);
   const [currentUser, setCurrentUser] = useState(initialFormState);
-
-  useEffect(() => {}, [users]);
 
   const addUser = (user) => {
     user.id = users.length + 1;
